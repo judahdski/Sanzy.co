@@ -2,18 +2,19 @@ import React from 'react';
 import BusinessCard from './BusinessCard';
 import BottomNav from './BottomNav';
 import Header from './Header';
+import { businessDivisions } from '../data';
 
 const HomePage = () => {
-    const number = [1, 2, 3, 4, 5, 6, 7, 8];
-
     return (
         <>
             <Header />
 
-            <div className="p-6 grid grid-cols-4 gap-4">
-                {number.map((num, index) => (
-                    <BusinessCard key={index} />
-                ))}
+            <div className="p-6 grid grid-cols-3 gap-4">
+                {businessDivisions.map((businessDivision, index) => {
+                    const { id, name, icon } = businessDivision;
+
+                    return <BusinessCard key={index} idBusiness={id} nameBusiness={name} iconBusiness={icon} />;
+                })}
             </div>
 
             <BottomNav />

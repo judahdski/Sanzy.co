@@ -5,7 +5,7 @@ import { logoWhite } from '../assets/brand-logo/index';
 const OrderFormPage = () => {
     return (
         <div className="bg-white">
-            <header className="h-[56px] py-3 flex justify-center items-center gap-1 relative shadow">
+            <header className="h-[56px] py-3 flex justify-center items-center gap-1 relative shadow rounded-b-2xl">
                 <img src={logoWhite} className="h-full" />
                 <p className="text-base font-medium">Grafis</p>
                 <NavLink to="/" className={'absolute left-6 p-1'}>

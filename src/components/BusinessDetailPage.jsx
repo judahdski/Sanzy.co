@@ -1,15 +1,18 @@
 import React from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 import { logoWhite } from '../assets/brand-logo/index';
+import { businessDivisions } from '../data';
 
 function BusinessDetailPage() {
     const { id } = useParams();
 
+    const selectedBusinessDiv = businessDivisions.filter((businessDivision) => businessDivision.id === id)[0];
+
     return (
-        <>
+        <div className='bg-white'>
             <header className="h-[56px] py-3 flex justify-center items-center gap-1 relative">
                 <img src={logoWhite} className="h-full" />
-                <p className="text-base font-medium">Grafis</p>
+                <p className="text-base font-medium">{selectedBusinessDiv.name}</p>
                 <NavLink to="/" className={'absolute left-6 p-1'}>
                     <i class="fa-solid fa-xmark"></i>
                 </NavLink>
@@ -28,7 +31,7 @@ function BusinessDetailPage() {
                     <p className='text-xs md:text-sm text-[#808080]'>Berikut ini di bawah merupakan contoh pekerjaan yang pernah dikerjakan. Bisa diperhatikan dan dijadikan bahan pertimbangan.</p>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 

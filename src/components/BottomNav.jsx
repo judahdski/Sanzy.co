@@ -13,7 +13,7 @@ const BottomNav = () => {
                 )}
             </NavLink>
 
-            <NavLink to="/orders" className={'w-full flex flex-col justify-center items-center gap-1'}>
+            <NavLink to="" className={'w-full flex flex-col justify-center items-center gap-1'}>
                 {({ isActive }) => (
                     <>
                         <i className={`fa-solid fa-cart-shopping ${isActive ? 'text-[#66ACFF]' : 'text-[#BDBDBD]'}`}></i>
