@@ -11,3 +11,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </BrowserRouter>
     </React.StrictMode>
 );
+
+window.addEventListener('resize', function () {
+    const height = window.innerHeight;
+    body.height = height;
+});
