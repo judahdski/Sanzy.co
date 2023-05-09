@@ -17,10 +17,10 @@ function BusinessDetailPage() {
             <div className="py-6 px-8">
                 <div className="w-full aspect-square bg-slate-200 grid place-items-center rounded-lg">POSTER</div>
                 <div className="w-full grid place-items-center my-8">
-                    <button className="bg-[#1BE42F] hover:bg-[#14dc28] flex items-center gap-4 px-6 py-3 text-white rounded-lg">
+                    <NavLink to='/order_form' className={"bg-[#1BE42F] hover:bg-[#14dc28] flex items-center gap-4 px-6 py-3 text-white rounded-lg"}>
                         <i class="fa-solid fa-cart-plus"></i>
                         <p>PESAN DI SINI</p>
-                    </button>
+                    </NavLink>
                 </div>
                 <hr className='mb-6' />
                 <div>
