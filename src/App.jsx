@@ -1,12 +1,11 @@
 import { logoTransparent } from './assets/brand-logo/index';
-import { graphicDesignIcon } from './assets/icon/index';
 import './App.css';
-import BusinessCard from './components/BusinessCard';
 import BottomNav from './components/BottomNav';
+import { Route, Routes } from 'react-router-dom';
+import HomePage from './components/HomePage';
+import UserOrdersPage from './components/UserOrdersPage';
 
 const App = () => {
-    const number = [1, 2, 3, 4, 5, 6, 7, 8];
-
     return (
         <>
             <div className="h-full relative">
@@ -17,10 +16,11 @@ const App = () => {
                     </div>
                 </header>
 
-                <div className="p-6 grid grid-cols-4 gap-4">
-                    {number.map((num, index) => (
-                        <BusinessCard key={index} />
-                    ))}
+                <div className="p-6">
+                    <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/orders" element={<UserOrdersPage />} />
+                    </Routes>
                 </div>
 
                 <BottomNav />
